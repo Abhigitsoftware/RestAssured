@@ -1,0 +1,206 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081600000 to 0x0000000089600000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3387), pid=7468, tid=4080
+#
+# JRE version:  (11.0.14.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.14.1+1, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=Cp1252 org.testng.remote.RemoteTestNG -serport 60335 -protocol json -d F:\QCCA8\eclipse\com.vtiger_sdet31_1\SDET-31_RestAssured\test-output C:\Users\Abhishek\AppData\Local\Temp\testng-eclipse-685672100\testng-customsuite.xml
+
+Host: Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz, 4 cores, 7G,  Windows 8.1 , 64 bit Build 9600 (6.3.9600.20172)
+Time: Tue May 10 16:22:15 2022 India Standard Time elapsed time: 0.057210 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000086c6639000):  JavaThread "Unknown thread" [_thread_in_vm, id=4080, stack(0x00000086c4560000,0x00000086c4660000)]
+
+Stack: [0x00000086c4560000,0x00000086c4660000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e59a]
+V  [jvm.dll+0x7aaca9]
+V  [jvm.dll+0x7ac398]
+V  [jvm.dll+0x7aca73]
+V  [jvm.dll+0x24f9b8]
+V  [jvm.dll+0x61b83a]
+V  [jvm.dll+0x6100c5]
+V  [jvm.dll+0x30772c]
+V  [jvm.dll+0x3075b2]
+V  [jvm.dll+0x30c2d6]
+V  [jvm.dll+0x35272f]
+V  [jvm.dll+0x352160]
+V  [jvm.dll+0x2e4728]
+V  [jvm.dll+0x2e5886]
+V  [jvm.dll+0x784b07]
+V  [jvm.dll+0x78628f]
+V  [jvm.dll+0x35f479]
+V  [jvm.dll+0x767aa0]
+V  [jvm.dll+0x3ccf1f]
+V  [jvm.dll+0x3cf2b1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.DLL+0x1c1ae]
+C  [KERNEL32.DLL+0x13d2]
+C  [ntdll.dll+0x154f4]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000086c446fef0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000086c6651800 GCTaskThread "GC Thread#0" [stack: 0x00000086c5fc0000,0x00000086c60c0000] [id=2088]
+  0x00000086c6681000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000086dde10000,0x00000086ddf10000] [id=8364]
+  0x00000086c6686800 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000086ddf10000,0x00000086de010000] [id=1364]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffcaa2f3ef7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000086c6635bf0] Heap_lock - owner thread: 0x00000086c6639000
+
+Heap address: 0x0000000081600000, size: 2026 MB, Compressed Oops mode: Non-zero based: 0x0000000081600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.027 Loaded shared library C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff67e270000 - 0x00007ff67e27d000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\javaw.exe
+0x00007ffcc5ce0000 - 0x00007ffcc5e8d000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffcc3430000 - 0x00007ffcc356f000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffcc3190000 - 0x00007ffcc32a5000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffcbe8a0000 - 0x00007ffcbe8b7000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\jli.dll
+0x00007ffcba280000 - 0x00007ffcba295000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\VCRUNTIME140.dll
+0x00007ffcc1900000 - 0x00007ffcc1904000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x00007ffcc0480000 - 0x00007ffcc0484000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x00007ffcbe890000 - 0x00007ffcbe893000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x00007ffcbe870000 - 0x00007ffcbe875000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-math-l1-1-0.dll
+0x00007ffcbdfb0000 - 0x00007ffcbdfb3000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x00007ffcbdec0000 - 0x00007ffcbdec3000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x00007ffcc0990000 - 0x00007ffcc0c0b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.19394_none_62486577ecb635cf\COMCTL32.dll
+0x00007ffcc3570000 - 0x00007ffcc36e7000 	C:\Windows\system32\USER32.dll
+0x00007ffcbd200000 - 0x00007ffcbd203000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x00007ffcbc680000 - 0x00007ffcbc684000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-string-l1-1-0.dll
+0x00007ffcbc2f0000 - 0x00007ffcbc2f4000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x00007ffcc5720000 - 0x00007ffcc57ca000 	C:\Windows\system32\msvcrt.dll
+0x00007ffcc5580000 - 0x00007ffcc56ce000 	C:\Windows\system32\GDI32.dll
+0x00007ffcb9d90000 - 0x00007ffcb9e8a000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\ucrtbase.DLL
+0x00007ffcc56d0000 - 0x00007ffcc5706000 	C:\Windows\system32\IMM32.DLL
+0x00007ffcc38d0000 - 0x00007ffcc3a21000 	C:\Windows\system32\MSCTF.dll
+0x00007ffcb9cf0000 - 0x00007ffcb9d8b000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\msvcp140.dll
+0x00007ffcbc2d0000 - 0x00007ffcbc2d3000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-time-l1-1-0.dll
+0x00007ffcbbc10000 - 0x00007ffcbbc13000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x00007ffcaa000000 - 0x00007ffcaab81000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\server\jvm.dll
+0x00007ffcc3820000 - 0x00007ffcc38ca000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffcb4f70000 - 0x00007ffcb4f79000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffcbe060000 - 0x00007ffcbe082000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffcbca50000 - 0x00007ffcbca5a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffcc5710000 - 0x00007ffcc5717000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffcc3c70000 - 0x00007ffcc3cc8000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ffcc5260000 - 0x00007ffcc539a000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffcc3a30000 - 0x00007ffcc3a8a000 	C:\Windows\system32\WS2_32.dll
+0x00007ffcbe030000 - 0x00007ffcbe05a000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffcc3160000 - 0x00007ffcc318e000 	C:\Windows\system32\SspiCli.dll
+0x00007ffcc57e0000 - 0x00007ffcc57e9000 	C:\Windows\system32\NSI.dll
+0x00007ffcc3110000 - 0x00007ffcc315f000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ffcc1bd0000 - 0x00007ffcc1bf8000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x00007ffcc0dc0000 - 0x00007ffcc0dd0000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\verify.dll
+0x00007ffcb5630000 - 0x00007ffcb57b9000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffcbdfd0000 - 0x00007ffcbdff8000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\java.dll
+0x00007ffcbe880000 - 0x00007ffcbe88a000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\jimage.dll
+0x00007ffcbdf20000 - 0x00007ffcbdf38000 	C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.19394_none_62486577ecb635cf;C:\Users\Abhishek\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 
+java_command: org.testng.remote.RemoteTestNG -serport 60335 -protocol json -d F:\QCCA8\eclipse\com.vtiger_sdet31_1\SDET-31_RestAssured\test-output C:\Users\Abhishek\AppData\Local\Temp\testng-eclipse-685672100\testng-customsuite.xml
+java_class_path (initial): C:\Users\Abhishek\eclipse\java-2021-09\eclipse\configuration\org.eclipse.osgi\442\0\.cp\lib\testng-remote.jar;F:\QCCA8\eclipse\com.vtiger_sdet31_1\SDET-31_RestAssured\target\test-classes;F:\QCCA8\eclipse\com.vtiger_sdet31_1\SDET-31_RestAssured\target\classes;C:\Users\Abhishek\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Abhishek\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\Abhishek\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\Abhishek\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\Abhishek\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\Abhishek\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Abhishek\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Abhishek\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\Abhishek\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\Abhishek\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\Abhishek\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Abhishek\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Abhishek\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Abhishek\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Abhishek\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Abhishek\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Abhishek\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Abhishek\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\Abhishek\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\Abhishek\.m2\repository\io\rest-assured\rest-assured-common\4.
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2124414976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_321
+PATH=C:/Users/Abhishek/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349/jre/bin/server;C:/Users/Abhishek/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_11.0.14.v20220314-1349/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_321\bin;F:\selenium softwares\apache-maven-3.8.5\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;c:\Windows\System32;C:\Users\Abhishek\AppData\Roaming\npm;C:\Windows\System32;
+USERNAME=Abhishek
+DISPLAY=:0.0
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.20172)
+OS uptime: 11 days 6:49 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4 microcode 0x21, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8102M (894M free)
+TotalPageFile size 57254M (AvailPageFile size 15M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.14.1+1) for windows-amd64 JRE (11.0.14.1+1), built on Feb  9 2022 01:48:27 by "" with unknown MS VC++:1916
+
+END.
